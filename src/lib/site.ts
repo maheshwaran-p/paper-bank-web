@@ -10,6 +10,7 @@ export const site = {
   stats: {
     rating: "4.8",
     ratingsCount: "2,000+",
+    downloads: "500+",
     languagesSupported: "25+",
   },
 } as const;
