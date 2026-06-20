@@ -19,6 +19,24 @@ export default function Footer() {
 
         <div className="flex flex-wrap items-center gap-3 text-sm font-semibold">
           <Link
+            to="/features"
+            className="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-900/5 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white"
+          >
+            Features
+          </Link>
+          <Link
+            to="/download"
+            className="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-900/5 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white"
+          >
+            Download
+          </Link>
+          <Link
+            to="/faq"
+            className="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-900/5 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white"
+          >
+            FAQ
+          </Link>
+          <Link
             to="/support"
             className="rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-900/5 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white"
           >

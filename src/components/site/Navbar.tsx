@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { LifeBuoy, ShieldCheck } from "lucide-react";
+import { HelpCircle, LifeBuoy, ShieldCheck, Sparkles } from "lucide-react";
 import Container from "../Container";
 import LogoMark from "./LogoMark";
 import { site } from "../../lib/site";
@@ -24,15 +24,27 @@ export default function Navbar() {
               {site.appName}
             </div>
             <div className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">
-              Support & Privacy
+              Receipt & Document Organizer
             </div>
           </div>
         </Link>
 
         <nav className="hidden items-center sm:flex">
           <div className="flex items-center gap-1 rounded-full border border-slate-200 bg-white/60 p-1 shadow-sm dark:border-white/10 dark:bg-white/5">
-            <NavLink to="/" className={navLinkClass}>
+            <NavLink to="/" end className={navLinkClass}>
               Home
+            </NavLink>
+            <NavLink to="/features" className={navLinkClass}>
+              <span className="inline-flex items-center gap-2">
+                <Sparkles className="size-4" />
+                Features
+              </span>
+            </NavLink>
+            <NavLink to="/faq" className={navLinkClass}>
+              <span className="inline-flex items-center gap-2">
+                <HelpCircle className="size-4" />
+                FAQ
+              </span>
             </NavLink>
             <NavLink to="/support" className={navLinkClass}>
               <span className="inline-flex items-center gap-2">
@@ -43,7 +55,7 @@ export default function Navbar() {
             <NavLink to="/privacy-policy" className={navLinkClass}>
               <span className="inline-flex items-center gap-2">
                 <ShieldCheck className="size-4" />
-                Privacy Policy
+                Privacy
               </span>
             </NavLink>
           </div>
@@ -51,7 +63,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           <a
-            href="/#get-app"
+            href="/download"
             className={cn(
               "inline-flex h-10 items-center justify-center rounded-full px-4 text-sm font-extrabold transition",
               "bg-blue-600/10 text-blue-800 ring-1 ring-blue-600/20 hover:bg-blue-600/15",
